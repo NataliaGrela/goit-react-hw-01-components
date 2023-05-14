@@ -7,10 +7,7 @@ export const FriendList = ({ friends }) => {
       <ul className={css.friends}>
         {friends.map(({ avatar, name, isOnline, id }) => (
           <li className={css.item} key={id}>
-            <span
-              className={css.status}
-              style={{ backgroundColor: bgColor(isOnline) }}
-            ></span>
+            <span className={isOnline ? css.active : css.nonActive}></span>
             <img className={css.avatar} src={avatar} alt={name} width="48" />
             <p className={css.name}>{name}</p>
           </li>
@@ -20,17 +17,13 @@ export const FriendList = ({ friends }) => {
   );
 };
 
-const bgColor = color => {
-  switch (color) {
-    case true:
-      return 'green';
-    case false:
-      return 'red';
-    default:
-      throw new Error(`${color}`);
-  }
-};
-
 FriendList.propTypes = {
-  friends: PropTypes.array,
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+      id: PropTypes.number.isRequired,
+    })
+  ),
 };

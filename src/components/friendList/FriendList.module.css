@@ -21,10 +21,25 @@
   font-size: 20px;
 }
 
-.status {
+/* .status {
   width: 10px;
   height: 10px;
   border-radius: 50%;
+} */
+
+.active {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #009739;
+  border-radius: 50%
+}
+
+.nonActive {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #db0f27;
 }
 
 .avatar {

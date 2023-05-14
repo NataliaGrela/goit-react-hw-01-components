@@ -1,24 +1,15 @@
-import { Profile } from './profile/Profile';
+import { Profile } from './Profile/Profile';
+import { Statistics } from './Statistics/Statistics';
+import { FriendList } from './FriendList/FriendList';
+import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 import user from '../data/user.json';
-import { Statistics } from './statistics/Statistics';
 import data from '../data/data.json';
-import { FriendList } from './friendList/FriendList';
 import friends from '../data/friends.json';
-import { TransactionHistory } from './transactionHistory/TransactionHistory';
 import transactions from '../data/transactions.json';
 
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        background: 'lightGrey',
-      }}
-    >
+    <div className="containerApp">
       <Profile
         username={user.username}
         tag={user.tag}
