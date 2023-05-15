@@ -1,4 +1,4 @@
-import { Profile } from './Profile/Profile.jsx';
+import { Profile } from './Profile/Profile'
 import { Statistics } from './Statistics/Statistics';
 import { FriendList } from './FriendList/FriendList';
 import { TransactionHistory } from './TransactionHistory/TransactionHistory';
